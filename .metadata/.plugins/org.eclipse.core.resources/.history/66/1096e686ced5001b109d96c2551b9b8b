@@ -1,0 +1,67 @@
+package com.RaiseIssue.Issue.entity;
+
+import java.util.Date;
+
+import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.Id;
+import javax.persistence.Table;
+
+@Entity
+@Table( name = "raiseissues")
+public class RaiseIssue {
+
+	@Id
+	@GeneratedValue
+	private int id;
+	private int empId;
+	private String title;
+	private String desc;
+	private Date date;
+	public int getIssueId() {
+		return id;
+	}
+	public void setIssueId(int issueId) {
+		this.id = issueId;
+	}
+	public int getEmployeeId() {
+		return empId;
+	}
+	public void setEmployeeId(int employeeId) {
+		this.empId = employeeId;
+	}
+	public String getTitle() {
+		return title;
+	}
+	public void setTitle(String title) {
+		this.title = title;
+	}
+	public String getDesc() {
+		return desc;
+	}
+	public void setDesc(String desc) {
+		this.desc = desc;
+	}
+	public Date getDate() {
+		return date;
+	}
+	public void setDate(Date date) {
+		this.date = date;
+	}
+	public RaiseIssue(int issueId, int employeeId, String title, String desc, Date date) {
+		super();
+		this.id = issueId;
+		this.empId = employeeId;
+		this.title = title;
+		this.desc = desc;
+		this.date = date;
+	}
+	public RaiseIssue() {
+		super();
+		// TODO Auto-generated constructor stub
+	}
+	public RaiseIssue orElse(RaiseIssue issue) {
+		// TODO Auto-generated method stub
+		return null;
+	}
+}
